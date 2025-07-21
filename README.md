@@ -44,25 +44,25 @@ The dataset used for this project is from Kaggle: [Churn in Telecoms Dataset](ht
 - There are 20 features (independent variables) and 1 target variable (churn). Below is a breakdown of each variable:
    1. state - This shows the state where the customer resides and it can be help identify geographic patterns in churn.
    2. area code - Associated with the customers Phone number.
-      3. phone number - Customer's phone number (serves as an Unique identifier)
-      4. account length- Duration of customer’s relationship with SyriaTel. 
-      5. international plan- Indicates whether the customer has an international calling plan (`yes`/`no`)
-      6. voice mail plan - Indicates whether the customer has subscribed to voice mail service plan (`yes`/`no`)
-      7. total day calls - Total number of calls made during the day
-      8. total day minutes - Total number of minutes the customer has spent on calls during the day
-      9. total eve minutes - Total minutes of calls made in the evening
-      10. total eve calls - Total number of evening calls
-      11. total night minutes- The total number of minutes the customer has spent on calls during the night.
-      12. total night calls - The total number of calls the customer has made during the night
-      13. total intl minutes -  The total number of minutes the customer has spent on international calls.
-      14. total intl calls  -  The total number of international calls the customer has made.
-      15. number vmail messages - Number of voice mail messages the customer has received.
-      16. total night charge - The total charges incurred by the customer for nighttime calls.
-      17. total intl charge - The total charges incurred by the customer for international calls.
-      18. total eve charge - Total charges Incurred by the customer for evening call
-      19. total day charge - Total charge incurred by the customer for daytime calls
-      20. customer service calls - The number of times the customer has called customer service.
-      21. churn -  Whether the customer has churned (`True` = churned, `False` = active)
+   3. phone number - Customer's phone number (serves as an Unique identifier)
+   4. account length- Duration of customer’s relationship with SyriaTel. 
+   5. international plan- Indicates whether the customer has an international calling plan (`yes`/`no`)
+   6. voice mail plan - Indicates whether the customer has subscribed to voice mail service plan (`yes`/`no`)
+   7. total day calls - Total number of calls made during the day
+   8. total day minutes - Total number of minutes the customer has spent on calls during the day
+   9. total eve minutes - Total minutes of calls made in the evening
+   10. total eve calls - Total number of evening calls
+   11. total night minutes- The total number of minutes the customer has spent on calls during the night.
+   12. total night calls - The total number of calls the customer has made during the night
+   13. total intl minutes -  The total number of minutes the customer has spent on international calls.
+   14. total intl calls  -  The total number of international calls the customer has made.
+   15. number vmail messages - Number of voice mail messages the customer has received.
+   16. total night charge - The total charges incurred by the customer for nighttime calls.
+   17. total intl charge - The total charges incurred by the customer for international calls.
+   18. total eve charge - Total charges Incurred by the customer for evening call
+   19. total day charge - Total charge incurred by the customer for daytime calls
+   20. customer service calls - The number of times the customer has called customer service.
+   21. churn -  Whether the customer has churned (`True` = churned, `False` = active)
 
  ### Data Limitation:
 - Class Imbalance: about 85.5% of the customers did not churn, while only 14.5% did. This imbalance can affect model performance by making it biased toward predicting the majority class.
@@ -79,7 +79,7 @@ The dataset used for this project is from Kaggle: [Churn in Telecoms Dataset](ht
    - Encoding Categorical Features
    - Data Normalization
 
- #### a) Feature types
+ ####  Feature types
  - Categorical Variable:
    - state
    - area code
@@ -102,4 +102,19 @@ The dataset used for this project is from Kaggle: [Churn in Telecoms Dataset](ht
    - total intl charge
    - customer service calls  
 
- ### Exploratory Data Analysis (EDA) 
+ ## Exploratory Data Analysis (EDA) 
+- Churn Rate
+- Distributions of Numeric & Categorical features
+- Factors that contribute most to customer churn.
+- Univariate Analysis
+- Bivariate Analysis
+
+### Churn Distribution
+- From the class distribution, we observe that 85.5% of the customers did not churn while only 14.5% churned. This shows a significant class imbalance. 
+![Churn Distribution](Images/Churn%20Distribution.png)
+
+### Distribution of Numerical & Categorical Variable
+<p float="left">
+  <img src="Images/Churn_Distribution.png" width="45%" />
+  <img src="Images/Churn_Distribution.png" width="45%" />
+</p>
