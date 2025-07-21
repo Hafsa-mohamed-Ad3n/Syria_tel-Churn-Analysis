@@ -42,8 +42,8 @@ The dataset used for this project is from Kaggle: [Churn in Telecoms Dataset](ht
 - The dataset provided contains customer-level usage and service information from SyriaTel, aimed at identifying patterns that lead to customer churn. 
 - The dataset has 3333 rows which represents customers and 21 column which captures features that influence their decision to stay (Not churned) or leave(Churned) the service.
 - There are 20 features (independent variables) and 1 target variable (churn). Below is a breakdown of each variable:
-      1. state - This shows the state where the customer resides and it can be help identify geographic patterns in churn.
-      2. area code - Associated with the customers Phone number.
+   1. state - This shows the state where the customer resides and it can be help identify geographic patterns in churn.
+   2. area code - Associated with the customers Phone number.
       3. phone number - Customer's phone number (serves as an Unique identifier)
       4. account length- Duration of customer’s relationship with SyriaTel. 
       5. international plan- Indicates whether the customer has an international calling plan (`yes`/`no`)
