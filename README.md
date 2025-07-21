@@ -114,14 +114,13 @@ The dataset used for this project is from Kaggle: [Churn in Telecoms Dataset](ht
 
 ![Churn Distribution](Images/Churn%20Distribution.png)
 
-### Distribution of Numerical & Categorical Variable
-<p float="left">
-  <img src="Images/Churn_Distribution.png" width="45%" />
-  <img src="Images/Churn_Distribution.png" width="45%" />
-</p>
+### Factors that contribute most to customer churn.
+- To better understand what drives customers to leave, I grouped the variables into thematic areas and explored their impact on churn. These factors include:
+   - Tenure (Account Length) : to understand if longer-term customers are more or less likely to churn.
+   - Geographical Factors(State) :to detect regional or location-based trends in churn.
+   - Service Plan Subscriptions (International Plan & Voice Mail Plan) — Does having specific plans influences churn likelihood
+   - Usage Behavior (Call & Minute Usage during all period of time) — Does high or low usage patterns are linked to churn.
+   - Financial Impact (Charges): to evaluate if higher billing is associated with customer dissatisfaction and churn.
+   - Customer Service Interaction (Number of Customer Service Calls) — Does frequent service contact signals dissatisfaction.
 
-<p align="center">
-  <img src="Images/Churn_Distribution.png" width="45%" />
-  <img src="Images/Churn_Distribution.png" width="45%" />
-</p>
 
