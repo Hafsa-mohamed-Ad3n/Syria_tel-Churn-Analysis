@@ -111,6 +111,7 @@ The dataset used for this project is from Kaggle: [Churn in Telecoms Dataset](ht
 
 ### Churn Distribution
 - From the class distribution, we observe that 85.5% of the customers did not churn while only 14.5% churned. This shows a significant class imbalance. 
+
 ![Churn Distribution](Images/Churn%20Distribution.png)
 
 ### Distribution of Numerical & Categorical Variable
@@ -118,3 +119,9 @@ The dataset used for this project is from Kaggle: [Churn in Telecoms Dataset](ht
   <img src="Images/Churn_Distribution.png" width="45%" />
   <img src="Images/Churn_Distribution.png" width="45%" />
 </p>
+
+<p align="center">
+  <img src="Images/Churn_Distribution.png" width="45%" />
+  <img src="Images/Churn_Distribution.png" width="45%" />
+</p>
+
