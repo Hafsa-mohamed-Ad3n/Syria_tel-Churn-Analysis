@@ -143,8 +143,6 @@ The dataset used for this project is from Kaggle: [Churn in Telecoms Dataset](ht
    - Churned customers do not appear to have dramatically shorter or longer tenures compared to loyal ones.
 
 ![Distribution of Account Length vs Churn](Images/Tenure.png)
-![Distribution of Tenure vs Churn](Images/Tenure.png)
-
 
 
 #### Financial impact
@@ -215,9 +213,12 @@ The dataset used for this project is from Kaggle: [Churn in Telecoms Dataset](ht
 - To address the imbalanced (churn rate ~14%) datasets i have applied SMOTE (Synthetic Minority Oversampling Technique) on the training data to create a balanced training set.
 
 ### Models used
-- Logistic Regression: Used as a baseline model.
+- Logistic Regression (No resampling): checking how well logistic regression works without doing anything about imbalanced data (if some classes appear much more than others).
     - Accuracy: 72%
     - High recall for churners (81%) but low precision (30%), indicating many false positives.
+
+
+- Logistic Regression + SMOTE : Uses SMOTE, which artificially creates more examples of the minority class to improve fairness of the model. This helps the model learn both classes more equally.
 
 - Random Forest Classifier: Performed significantly better with high accuracy and good recall for churners, making it suitable for deployment.
     - Accuracy: 93%
@@ -227,4 +228,57 @@ The dataset used for this project is from Kaggle: [Churn in Telecoms Dataset](ht
          - 76 True Positives
          - 31 False Positives (Type I errors)
          - 17 False Negatives (Type II errors)
+
+
+#### Model Comparisons 
+- class 1 = churn
+
+| Model                      | Confusion Matrix         | Accuracy | Recall (Class 1) | F1-Score (Class 1) | Support (Class 1) |
+| ---------------------------| ------------------------ | -------- | ---------------- | ------------------ | ----------------- |
+| 1. Logistic (No SMOTE)     | `[[552, 22], [75, 18]]`  | 0.85     | 0.19             | 0.27               | 93                |
+| 2. Logistic + SMOTE        | `[[402, 172], [18, 75]]` | 0.72     | 0.81             | 0.44               | 93                |
+| 3.**Random Forest + SMOTE**|**`[[543, 31], [17, 76]]`**| **0.93**| **0.82**         | **0.76**           | **93**            |
+
+
+#### Model Interpretation
+- Logistic no resampling: has high accuracy, but very poor recall and F1 for the minority class. It misses many potential churners, making it less suitable for identifying at risk customers.
+- Logistic + SMOTE improves recall for churners a lot, but loses accuracy by catching churners, but misclassifies many non-churners.
+- Random Forest + SMOTE gives the best of both worlds:
+     - Highest overall accuracy
+     - High recall and F1-score for churners
+     - Balanced performance for both classes
+
+
+#### Model Selection
+
+- I selected Random Forest model combined with SMOTE resampling as the final model for deployment as it achieves:
+     - Highest accuracy (93%)
+     - Strong recall (82%) for identifying churners
+     - Best F1-score (76%) which balances precision and recall
+
+- Class imbalance is addressed using SMOTE, improving the model's ability to detect minority cases.
+- Random Forest captures complex relationships in customer behavior better than linear models like logistic regression.
+
+
+
+### Business Implication for SyriaTel
+
+- This model enables early and accurate detection of customers likely to churn, which directly supports SyriaTel’s goal of proactive customer retention. With this insight, the business can:
+    - Target at-risk customers with personalized offers or service improvements
+    - Reduce churn rates which protects recurring revenue
+    - Optimize marketing spend focusing only on customers who truly need retention efforts
+    - Improve customer satisfaction by intervening before dissatisfaction leads to loss
+
+### Areas for Enhancement:
+
+While the current analysis provided a strong starting point for churn prediction, there are several areas that could be explored further to improve model performance and business impact, given more time or deeper expertise.
+
+- Model Refinement
+   - Apply hyperparameter tuning (Grid Search or Randomized Search) to optimize Random Forest model.
+   - Explore advanced ensemble models such as Gradient Boosting.
+
+- Model Deployment & Monitoring
+   - Convert the final model into a deployable format and integrate it with existing CRM database
+   - Implement real-time monitoring to track the model performnace overt time
+
 
