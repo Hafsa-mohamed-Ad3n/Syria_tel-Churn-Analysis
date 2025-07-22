@@ -116,11 +116,88 @@ The dataset used for this project is from Kaggle: [Churn in Telecoms Dataset](ht
 
 ### Factors that contribute most to customer churn.
 - To better understand what drives customers to leave, I grouped the variables into thematic areas and explored their impact on churn. These factors include:
-   - Tenure (Account Length) : to understand if longer-term customers are more or less likely to churn.
-   - Geographical Factors(State) :to detect regional or location-based trends in churn.
+   - Tenure (Account Length) - to understand if longer-term customers are more or less likely to churn.
+   - Geographical Factors(State) - to detect regional or location-based trends in churn.
    - Service Plan Subscriptions (International Plan & Voice Mail Plan) — Does having specific plans influences churn likelihood
    - Usage Behavior (Call & Minute Usage during all period of time) — Does high or low usage patterns are linked to churn.
    - Financial Impact (Charges): to evaluate if higher billing is associated with customer dissatisfaction and churn.
    - Customer Service Interaction (Number of Customer Service Calls) — Does frequent service contact signals dissatisfaction.
 
 
+
+#### Geographical Analysis
+
+- To support the company’s location based retention strategy, I identified which states have the highest number of churned customers.
+- I visualized the churn intensity to helps the company to prioritize outreach efforts and marketing campaigns in high-churn states and design targeted interventions by region.
+   - Washington, New jersey & Texas have the highest customers who have churned
+   - Majority of other states reflect a moderate level of churn and shouldn't be overlooked when designing region-specific retention strategies
+
+![Churn Count by State](Images/Geography.png)
+
+#### Tenure
+- To understand how customer longevity influences churning, I analyzed how long each customer has been with the company (in days).
+
+- *Are newer customers more likely to churn or do long-term customers tend to stay?*
+   - The spread and median of tenure for churned and non-churned customers look very similar.
+   - Both groups have a median around 100 days.
+   - Churned customers do not appear to have dramatically shorter or longer tenures compared to loyal ones.
+
+![Distribution of Account length vs Churn](Images\Tenure.png)
+
+#### Financial impact
+- I compared the total revenue from churned vs. non-churned customers, and shows what percentage of overall revenue each group contributes.
+- Churned customers account for 15.9% of the company’s total revenue loss. On average, each customer who leaves contributes approximately 1.4% to that lost revenue.
+![Revenue Breakdown by Churn Status](Images/Financial%20Impact.png)
+
+
+#### Service Plan Analysis
+- To understand the impact of service subscriptions on churn, I examined whether having an international plan or a voice mail plan made customers more or less likely to churn.
+   - Customers with an international plan are significantly more likely to churn compared to those without.
+   - Customers with a voice mail plan are less likely to churn.
+   - The highest risk group is international plan customers with no voicemail Services and the company should have immediate action  for these group of customers
+
+![Churn by International Plan](Images/Churn%20by%20International%20Plan.png)
+![Churn by Voicemail Plan](Images/Churn%20by%20Voicemail%20Plan.png)
+
+
+#### Customer Service Calls
+- To assess whether customer dissatisfaction drives churn, I examined the number of customer service calls made, as repeated contact without support may indicate unresolved issues or frustration.
+   - Customers who churned made an average of 2.23 calls.
+   - Customers who stayed made an average of 1.45 calls.
+
+- The difference of just one extra call on average suggests a thin line between staying and churning, even a small increase in service issues can tip a customer toward leaving.
+
+- The churn rate increases sharply with the number of service calls therefore the company should work on the first contact resolution
+      - Churn decreases with lower support calls, especially for long-tenure customers
+      - Once customers hit 5 or more service calls, churn shoots up (above 50%+) indicating rising dissatisfaction
+
+![Number of Customer Service Churn](Images/Customer%20Service%20Churn.png)
+![Customer Service Calls vs Churn](Images/Customer%20service%20Box.png)
+
+
+#### Diffrent Time Period usage Analysis.
+- To understand whether customer activity levels influence churn, I analyzed usage patterns across different time periods and services to see if low or high engagement is linked to a higher likelihood of churn.
+   - Churned customers generally use more call minutes, particularly during the day, than those who remain. This could suggest that higher usage may lead to greater sensitivity to costs, influencing their decision to leave.
+   - The number of calls (day, evening, night, international) remains nearly the same between both groups.
+
+![Call Minute Distribution by Time Period](Images/Minute%20Distribution.png)
+
+### Strategies to Reduce Churn
+- Observation:
+   - Churn rates vary significantly across states, with certain regions (e.g., Washington, Texas) showing notably higher churn levels.
+   - Churn appears more likely among customers at both ends of the tenure spectrum (very new and long term users) with churned users having a slightly higher average account length, indicating early drop-offs and late disengagement.
+   - Customers subscribed to the international plan are approximately 4 times more likely to churn, suggesting potential dissatisfaction with pricing or perceived value. In contrast, those with the voice mail plan are more likely to stay, indicating its possible role in enhancing user satisfaction.
+   - Although differences in call usage are subtle, churned customers tend to use more day and international minutes, which may signal either heavy reliance or cost-related concerns.
+   - Churned users incur higher average charges, especially during daytime and international calls, reinforcing the idea that high-spending customers may feel less value for money.
+   - There is a strong positive relationship between customer service interactions and churn. Customers who make 4 or more calls to support are at particularly high risk, possibly due to unresolved complaints or poor service experiences.
+
+
+- Recomendation:
+   - Run localized campaigns in high-churn states (Washington, Texas) with deeper nvestigation into region specific issues like service quality, network coverage or billing concerns.
+   - Develop onboarding programs for new customers and loyalty program for long term customers to reduce early drop-offs and late disengagement.
+   - Proactively monitor customers with 3+ surpport calls and prioritize them for resolution. Train customer service team to resolve issues on the first contact to prevent frustration.
+   - Reassess the value proposition of the international plan. This could involve improving call quality, reducing costs, or bundling with other perks to increase satisfaction.
+   -  Consider making the voice mail plan a default offering or promote it more actively, given its positive association with retention.
+   - Introduce spending caps or usage notifications for customers who pay more especially during daytime & International calls to help manage expectations and reduce bill shock as these users are more likely to churn.
+
+## Modeling
