@@ -142,7 +142,10 @@ The dataset used for this project is from Kaggle: [Churn in Telecoms Dataset](ht
    - Both groups have a median around 100 days.
    - Churned customers do not appear to have dramatically shorter or longer tenures compared to loyal ones.
 
-![Distribution of Account length vs Churn](Images\Tenure.png)
+![Distribution of Account Length vs Churn](Images/Tenure.png)
+![Distribution of Tenure vs Churn](Images/Tenure.png)
+
+
 
 #### Financial impact
 - I compared the total revenue from churned vs. non-churned customers, and shows what percentage of overall revenue each group contributes.
@@ -201,3 +204,27 @@ The dataset used for this project is from Kaggle: [Churn in Telecoms Dataset](ht
    - Introduce spending caps or usage notifications for customers who pay more especially during daytime & International calls to help manage expectations and reduce bill shock as these users are more likely to churn.
 
 ## Modeling
+
+- Objective
+    - The goal is to predict customer churn for SyriaTel using available customer data. This helps the company proactively retain customers likely to stop using the service.
+
+
+### Data Preparation
+- I encoded categorical variables (international plan, voice mail plan, churn).
+- I standardized features using StandardScaler.
+- To address the imbalanced (churn rate ~14%) datasets i have applied SMOTE (Synthetic Minority Oversampling Technique) on the training data to create a balanced training set.
+
+### Models used
+- Logistic Regression: Used as a baseline model.
+    - Accuracy: 72%
+    - High recall for churners (81%) but low precision (30%), indicating many false positives.
+
+- Random Forest Classifier: Performed significantly better with high accuracy and good recall for churners, making it suitable for deployment.
+    - Accuracy: 93%
+    - Churn Precision: 71%, Recall: 82%
+    - Confusion Matrix:
+         - 543 True Negatives
+         - 76 True Positives
+         - 31 False Positives (Type I errors)
+         - 17 False Negatives (Type II errors)
+
