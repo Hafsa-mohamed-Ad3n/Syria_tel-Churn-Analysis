@@ -9,7 +9,7 @@ Retaining customers is a central part of Syriatel’s strategy. This is because 
 
 Syriatel is one of Syria’s leading telecommunications providers, offering mobile and data services to millions of customers across the country. However, due to the competitive nature of the industry, retaining customers is increasingly challenging. To maintain its market position and continue delivering high-quality services, Syriatel must find effective ways to understand and reduce customer churn.
 
-The objective of this project is to analyze customer behavior and predict churn using machine learning techniques. By identifying customers at high risk of churning, Syriatel can apply targeted retention strategies to improve customer satisfaction and loyalty. 
+The objective of this project is to analyze customer behaviour and predict churn using machine learning techniques. By identifying customers at high risk of churning, Syriatel can apply targeted retention strategies to improve customer satisfaction and loyalty. 
 
 ### Stakeholder
 
@@ -119,7 +119,7 @@ The dataset used for this project is from Kaggle: [Churn in Telecoms Dataset](ht
    - Tenure (Account Length) - to understand if longer-term customers are more or less likely to churn.
    - Geographical Factors(State) - to detect regional or location-based trends in churn.
    - Service Plan Subscriptions (International Plan & Voice Mail Plan) — Does having specific plans influences churn likelihood
-   - Usage Behavior (Call & Minute Usage during all period of time) — Does high or low usage patterns are linked to churn.
+   - Usage behaviour (Call & Minute Usage during all period of time) — Does high or low usage patterns are linked to churn.
    - Financial Impact (Charges): to evaluate if higher billing is associated with customer dissatisfaction and churn.
    - Customer Service Interaction (Number of Customer Service Calls) — Does frequent service contact signals dissatisfaction.
 
