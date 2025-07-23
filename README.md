@@ -194,7 +194,7 @@ The dataset used for this project is from Kaggle: [Churn in Telecoms Dataset](ht
 
 
 - Recomendation:
-   - Run localized campaigns in high-churn states (Washington, Texas) with deeper nvestigation into region specific issues like service quality, network coverage or billing concerns.
+   - Run localized campaigns in high-churn states (Washington, Texas) with deeper investigation into region specific issues like service quality, network coverage or billing concerns.
    - Develop onboarding programs for new customers and loyalty program for long term customers to reduce early drop-offs and late disengagement.
    - Proactively monitor customers with 3+ surpport calls and prioritize them for resolution. Train customer service team to resolve issues on the first contact to prevent frustration.
    - Reassess the value proposition of the international plan. This could involve improving call quality, reducing costs, or bundling with other perks to increase satisfaction.
@@ -257,7 +257,7 @@ The dataset used for this project is from Kaggle: [Churn in Telecoms Dataset](ht
      - Best F1-score (76%) which balances precision and recall
 
 - Class imbalance is addressed using SMOTE, improving the model's ability to detect minority cases.
-- Random Forest captures complex relationships in customer behavior better than linear models like logistic regression.
+- Random Forest captures complex relationships in customer behaviour better than linear models like logistic regression.
 
 
 
@@ -279,6 +279,6 @@ While the current analysis provided a strong starting point for churn prediction
 
 - Model Deployment & Monitoring
    - Convert the final model into a deployable format and integrate it with existing CRM database
-   - Implement real-time monitoring to track the model performnace overt time
+   - Implement real-time monitoring to track the model performance overt time
 
 
